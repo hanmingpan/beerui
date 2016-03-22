@@ -1,0 +1,102 @@
+{
+  "name": "beerui",
+  "version": "1.0.0",
+  "description": "caijing",
+  "main": "app.js",
+  "dependencies": {
+    "jquery": "^1.11.3",
+    "layer": "^0.1.0",
+    "nice-validator": "^0.8.1",
+    "slick-carousel": "^1.5.9",
+    "sprity": "^1.0.8"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "browser-sync": "^2.8.2",
+    "browserify": "^12.0.1",
+    "browserify-shim": "^3.8.11",
+    "css-loader": "^0.23.1",
+    "exports-loader": "^0.6.2",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "gulp": "^3.9.0",
+    "gulp-assets": "^0.2.2",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-cache": "^0.2.10",
+    "gulp-clean-dest": "^0.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.7",
+    "lodash.assign": "^3.2.0",
+    "node-sass": "^3.4.2",
+    "resolve-url-loader": "^1.4.3",
+    "sass-loader": "^3.1.2",
+    "sprity-gm": "^1.0.2",
+    "sprity-sass": "^1.0.4",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.6.1",
+    "webpack": "^1.12.11",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "nice-validator": "./dep/nice-validator/jquery.validator.js",
+    "zh-cn": "./dep/nice-validator/local/zh-CN",
+    "layer": "./dep/layer/layer.js",
+    "layer.m": "./dep/layer/mobile/layer.m.js",
+    "placeholders": "./dep/placeholders/dist/placeholders.js",
+    "cookie": "./dep/jquery.cookie/jquery.cookie.js",
+    "fastclick": "./dep/fastclick/lib/fastclick.js",
+    "swiper": "./dep/swiper/dist/js/swiper.jquery.js"
+  },
+  "browserify-shim": {
+    "nice-validator": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    },
+    "layer": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    },
+    "layer.m": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    },
+    "cookie": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    },
+    "swiper": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    }
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "build": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base",
+    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js"
+  },
+  "author": "pan",
+  "license": "ISC"
+}
