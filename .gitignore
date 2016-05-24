@@ -1,5 +1,2 @@
-# npm包资源
 /node_modules/*
-
-# 编辑器缓存
 /.idea/*
