@@ -1,5 +1,5 @@
 # beerui
-舒爽的扎啤UI
+舒爽如扎啤的UI风格
 
 # 开发调试
-browser-sync start --server --files "scss/*.scss"
+browser-sync start --reload-delay --server --directory --files "scss/*.scss"

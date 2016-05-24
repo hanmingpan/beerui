@@ -1,0 +1,12 @@
+.demo {
+  .grid-row {
+    border: 1px solid #ccc;
+    background: linear-gradient(to right, #f5f5f5 50%, #fff 0) repeat-x 0 0 / 8.333333% 100%;
+  }
+  @for $i from 1 through 24 {
+    .row-#{$i} {
+      color: #9c0033;
+      border-right: 1px solid currentcolor;
+    }
+  }
+}
