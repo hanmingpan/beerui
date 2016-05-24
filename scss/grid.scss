@@ -1,12 +1,13 @@
+$gridNum: 12;
+
 .grid-row {
   width: 100%;
-  height: 100px;
   display: flex;
 
 }
-@for $i from 1 through 24 {
+@for $i from 1 through $gridNum {
   .row-#{$i} {
-    width: percentage($i / 24);
+    width: percentage($i / $gridNum);
     //flex: $i;
   }
 }

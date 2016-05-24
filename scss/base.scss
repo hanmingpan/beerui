@@ -1,0 +1,103 @@
+//基本字体样式
+body,
+input,select,button,textarea
+{
+  font: 16px/1.6 'Microsoft Yahei', 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti,  'WenQuanYi Micro Hei', sans-serif;
+  color: #333;
+}
+input,select,textarea{
+  font-size:100%;
+}
+
+//默认边距
+body, dl, dd,
+ul, ol,
+h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, legend, input, textarea, optgroup,
+p, blockquote, figure, hr, menu, dir,
+thead, tbody, tfoot, th, td
+{
+  margin:0;
+  padding:0;
+}
+//基本链接
+a {
+  text-decoration: none;/*1*/
+  color: #333;
+}
+a:hover {
+  text-decoration: underline;/*1*/
+}
+a:active {
+  background-color: transparent; /*2*/
+}
+
+//去掉列表前的标识, li会继承
+ul, ol {
+  list-style-type: none;
+  list-style-image: none;
+}
+
+//移除默认边框
+img,iframe{
+  border:0;
+}
+
+img {
+  display: block;
+}
+
+//修复th不继承text-align，默认左对齐
+caption,th {
+  text-align:left;
+}
+
+//斜体扶正
+address,cite,dfn,em,var{
+  font-style:normal;
+}
+
+//重置标题，采用自定义
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:500;
+}
+
+//统一引用标记
+q:before,q:after{
+  content:'';
+}
+
+/*
+ * 1. 让FF,S5,Chrome下的textarea只能纵向拉伸高度, 避免因拉伸而影响布局
+ * 2. 默认textarea与文本baseline对齐，导致文本沉在下面比较难看，这里统一与文本顶对齐
+ */
+textarea {
+  resize:vertical;
+  vertical-align:top;
+}
+
+//修正 Chrome 30- option 中文字无法显示的问题
+select:disabled option:checked,
+option:disabled:checked {
+  color: #D2D2D2;
+}
+
+//label 元素给予手型，暗示此处可点击
+label {
+  cursor: pointer;
+}
+
+//统一 select 样式, Firefox 中有 padding:1px 0
+select[size],
+select[multiple],
+select[size][multiple] {
+  border: 1px solid #AAA;
+  padding:0;
+}
+
+//button去除outline
+button:focus,
+button:active {
+  outline: none;
+}
