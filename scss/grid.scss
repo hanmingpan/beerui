@@ -1,13 +1,83 @@
-$gridNum: 12;
+@charset "UTF-8";
 
+// 水平网格
 .grid-row {
   width: 100%;
   display: flex;
-
+  flex-wrap: wrap;
 }
-@for $i from 1 through $gridNum {
+@for $i from 1 through $grid-num {
   .row-#{$i} {
-    width: percentage($i / $gridNum);
-    //flex: $i;
+    width: percentage($i / $grid-num);
+  }
+}
+
+// 垂直网格
+.grid-col {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@for $i from 1 through $grid-num {
+  .col-#{$i} {
+    height: percentage($i / $grid-num);
+  }
+}
+
+// 偏移
+@for $i from 1 through $grid-num {
+  .offset-#{$i} {
+    margin-left: percentage($i / $grid-num);
+  }
+}
+
+// 等分网格
+.avg {
+  flex: 1;
+}
+
+// 排序
+@for $i from 1 through $grid-num {
+  .order-#{$i} {
+    order: $i;
+  }
+}
+
+// 限制最大宽度
+.grid-wm {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+$align-data: (row, justify-content, align-items),(col, align-items, justify-content);
+
+@each $direction, $horizontal, $vertical in $align-data {
+  .grid-#{$direction} {
+    // 左对齐
+    &.grid-left {
+      #{$horizontal}: flex-start;
+    }
+    // 右对齐
+    &.grid-right {
+      #{$horizontal}: flex-end;
+    }
+    // 顶部对齐
+    &.grid-top {
+      #{$vertical}: flex-start;
+    }
+    // 底部对齐
+    &.grid-bottom {
+      #{$vertical}: flex-end;
+    }
+    // 水平居中
+    &.grid-center {
+      #{$horizontal}: center;
+    }
+    // 垂直居中
+    &.grid-middle {
+      #{$vertical}: center;
+    }
   }
 }
