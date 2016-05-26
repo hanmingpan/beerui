@@ -9,8 +9,11 @@ var gulp = require('gulp'),
     watchify = require('watchify');
 
 // 合并
-gulp.task('style', function() {
+gulp.task('dist', function() {
     style('./scss/beerui.scss', 'dist');
+});
+gulp.task('demo', function() {
+    style('./scss/demo.scss', 'demo');
 });
 
 function style(file, path){
@@ -26,6 +29,6 @@ function style(file, path){
 }
 
 gulp.task("default", function() {
-    gulp.watch("./scss/**.scss", ["style"]);
+    gulp.watch("./scss/**.scss", ['dist', 'demo']);
 });
 
