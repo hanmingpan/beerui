@@ -1,26 +1,46 @@
+$color-font: #fb284f;
+$color-bg: #f5f5f5;
+$color-bg-primary: #ff7b93;
+$color-border: #ccc;
+$color-border-light: #e5e5e5;
+
+/* 代码 */
 code {
-  color: #FB284F;
-  background-color: #f8f8f8;
-  padding: 2px 4px;
+  color: $color-font;
+  background-color: $color-bg;
+  padding: 2px 6px;
   white-space: nowrap;
 }
+
+/* 头部 */
 header {
   font-size: 32px;
   padding: 0 1em;
+  font-family: cursive;
+  line-height: 3;
+
+  span {
+    font-size: 28px;
+  }
 }
+
+/* 底部 */
 footer {
   padding: 2em 0;
   margin-top: 2em;
-  border-top: 1px solid #eee;
-  box-shadow: 1px 1px 2px 2px #f5f5f5;
+  border-top: 1px solid $color-border-light;
+  box-shadow: 1px 1px 2px 2px $color-bg;
 }
+
 .demo {
-  width: 1000px;
+  max-width: 1000px;
+  padding: 0 1em;
   margin: 0 auto;
 
+  /* 标题 */
   h2 {
     font-size: 24px;
-    color: #FB284F;
+    color: $color-font;
     margin: 1em 0;
   }
   h3 {
@@ -29,36 +49,34 @@ footer {
     margin: 2em 0 1em;
     font-weight: bold;
   }
-  .grid-row>div {
+  /* 网格 */
+  .grid-row,
+  .grid-col {
+    border: 1px solid $color-border;
+    text-align: center;
+  }
+  .grid-row,
+  .grid-col {
+    div:nth-child(even) {
+      background-color: $color-bg;
+    }
+  }
+  .grid-row > div {
     min-height: 36px;
     line-height: 36px;
   }
-
-  .grid-row {
-    border: 1px solid #ccc;
-    text-align: center;
-  }
-  .grid-row div:nth-child(even) {
-    background-color: #f5f5f5;
-  }
-  .grid-col {
-    border: 1px solid #ccc;
-    text-align: center;
-    height: 200px;
-  }
-  .grid-col div:nth-child(even) {
-    background-color: #f5f5f5;
-  }
   .demo-offset div[class^='row'] {
-    background-color: #ff7b93;
+    background-color: $color-bg;
+  }
+  .demo-grid-vertical {
+    height: 100px;
+
+    &>div {
+      border: 1px solid $color-border-light;
+    }
+    &.grid-col > div {
+      border: none;
+    }
   }
 }
 
-.children {
-  width: 1000px;
-  height: 50px;
-  background-color: #9c0033;
-}
-.demo-vertical {
-  height: 100px;
-}
