@@ -7,12 +7,12 @@
     <meta name="key" content="beerUI|css3|html5">
     <meta name="description" content="beerUI">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href='https://fonts.useso.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="dist/beerui.css">
     <link rel="stylesheet" href="demo/demo.css">
-
 </head>
 <body>
-    <header class="grid-wm">BeerUI</header>
+    <header class="grid-wm">BeerUI <span><i>&</i> css3</span></header>
     <div class="demo">
         <h2>网格</h2>
         <p>BeerUI 使用了 12 列的非响应式网格系统,使用时需在包裹容器上添加对应的类名。</p>
@@ -26,7 +26,7 @@
 
         <h3>垂直网格</h3>
         <p>包裹容器添加 <code>.grid-col</code>,子元素添加 <code>.col-*</code></p>
-        <div class="grid-col">
+        <div class="grid-col demo-grid-vertical">
             <div class="col-4">4</div>
             <div class="col-8">8</div>
         </div>
@@ -57,7 +57,7 @@
 
         <h3>顶部对齐</h3>
         <p>包裹容器添加 <code>.grid-top</code></p>
-        <div class="grid-row grid-top demo-vertical">
+        <div class="grid-row grid-top demo-grid-vertical">
             <div class="row-2">2</div>
             <div class="row-2">2</div>
             <div class="row-2">2</div>
@@ -66,7 +66,7 @@
 
         <h3>底部对齐</h3>
         <p>包裹容器添加 <code>.grid-bottom</code></p>
-        <div class="grid-row grid-bottom demo-vertical">
+        <div class="grid-row grid-bottom demo-grid-vertical">
             <div class="row-2">2</div>
             <div class="row-2">2</div>
             <div class="row-2">2</div>
@@ -94,7 +94,7 @@
         </div>
     </div>
     <footer class="text-center">
-        &copy;copyright beerui
+        The MIT License (MIT) &copy beerui
     </footer>
 </body>
 </html>
