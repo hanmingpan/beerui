@@ -1,56 +1,73 @@
-@charset "UTF-8";
-
-// 水平网格
+/* 水平网格 */
 .grid-row {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-}
-@for $i from 1 through $grid-num {
-  .row-#{$i} {
-    width: percentage($i / $grid-num);
+
+  @for $i from 1 through $grid-num {
+    .row-#{$i} {
+      width: percentage($i / $grid-num);
+    }
   }
 }
 
-// 垂直网格
+
+/* 垂直网格 */
 .grid-col {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-@for $i from 1 through $grid-num {
-  .col-#{$i} {
-    height: percentage($i / $grid-num);
+
+  @for $i from 1 through $grid-num {
+    .col-#{$i} {
+      height: percentage($i / $grid-num);
+    }
   }
 }
 
-// 偏移
-@for $i from 1 through $grid-num {
-  .offset-#{$i} {
-    margin-left: percentage($i / $grid-num);
+
+
+/* 偏移 */
+.grid-row,
+.grid-col {
+  @for $i from 1 through $grid-num {
+    .offset-#{$i} {
+      margin-left: percentage($i / $grid-num);
+    }
   }
 }
 
-// 等分网格
-.avg {
-  flex: 1;
-}
 
-// 排序
-@for $i from 1 through $grid-num {
-  .order-#{$i} {
-    order: $i;
+/* 等分网格 */
+.grid-row,
+.grid-col {
+  .avg {
+    flex: 1;
   }
 }
 
-// 限制最大宽度
+
+/* 排序 */
+.grid-row,
+.grid-col {
+  @for $i from 1 through $grid-num {
+    .order-#{$i} {
+      order: $i;
+    }
+  }
+}
+
+
+/* 限制最大宽度 */
 .grid-wm {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
+
+/* 对齐方式 */
 $align-data: (row, justify-content, align-items),(col, align-items, justify-content);
 
 @each $direction, $horizontal, $vertical in $align-data {

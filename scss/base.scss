@@ -742,7 +742,6 @@ iframe {
 }
 
 
-
 /* Forms
    ========================================================================== */
 
@@ -756,4 +755,14 @@ select {
   vertical-align: middle;
 }
 
-
+/* ios去掉黑色遮罩 */
+div,a,button,input,textarea {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/* 表单输入框placeholder的颜色值 */
+input::-webkit-input-placeholder{
+  color: #AAAAAA;
+}
+input:focus::-webkit-input-placeholder{
+  color: #EEEEEE;
+}

@@ -1,7 +1,18 @@
-
+code {
+  color: #FB284F;
+  background-color: #f8f8f8;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
 header {
   font-size: 32px;
   padding: 0 1em;
+}
+footer {
+  padding: 2em 0;
+  margin-top: 2em;
+  border-top: 1px solid #eee;
+  box-shadow: 1px 1px 2px 2px #f5f5f5;
 }
 .demo {
   width: 1000px;
@@ -9,15 +20,16 @@ header {
 
   h2 {
     font-size: 24px;
-    color: #333;
+    color: #FB284F;
     margin: 1em 0;
   }
   h3 {
     font-size: 18px;
-    color: #666;
-    margin: .5em 0;
+    color: #333;
+    margin: 2em 0 1em;
+    font-weight: bold;
   }
-  .grid-row div {
+  .grid-row>div {
     min-height: 36px;
     line-height: 36px;
   }

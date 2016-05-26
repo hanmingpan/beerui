@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>beerUI css3</title>
+    <title>BeerUI css3</title>
     <meta name="key" content="beerUI|css3|html5">
     <meta name="description" content="beerUI">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="dist/beerui.css">
+    <link rel="stylesheet" href="demo/demo.css">
+
 </head>
 <body>
-    <header class="grid-wm">beerUI</header>
+    <header class="grid-wm">BeerUI</header>
     <div class="demo">
         <h2>网格</h2>
+        <p>BeerUI 使用了 12 列的非响应式网格系统,使用时需在包裹容器上添加对应的类名。</p>
+
         <h3>水平网格</h3>
+        <p>包裹容器添加 <code>.grid-row</code>,子元素添加 <code>.row-*</code></p>
         <div class="grid-row">
             <div class="row-4">4</div>
             <div class="row-8">8</div>
         </div>
+
         <h3>垂直网格</h3>
+        <p>包裹容器添加 <code>.grid-col</code>,子元素添加 <code>.col-*</code></p>
         <div class="grid-col">
             <div class="col-4">4</div>
             <div class="col-8">8</div>
         </div>
+
         <h3>偏移网格</h3>
+        <p>子元素添加 <code>.offset-*</code></p>
         <div class="grid-row demo-offset">
             <div class="row-4">4</div>
             <div class="row-4 offset-4">4</div>
         </div>
+
         <h3>左对齐</h3>
+        <p>包裹容器添加 <code>.grid-left</code>,内部实现则根据水平或垂直方向做了处理。</p>
         <div class="grid-row grid-left">
             <div class="row-2">2</div>
             <div class="row-2">2</div>
@@ -36,27 +47,34 @@
             <div class="row-2">2</div>
         </div>
         <h3>右对齐</h3>
+        <p>包裹容器添加 <code>.grid-right</code></p>
         <div class="grid-row grid-right">
             <div class="row-2">2</div>
             <div class="row-2">2</div>
             <div class="row-2">2</div>
             <div class="row-2">2</div>
         </div>
+
         <h3>顶部对齐</h3>
+        <p>包裹容器添加 <code>.grid-top</code></p>
         <div class="grid-row grid-top demo-vertical">
             <div class="row-2">2</div>
             <div class="row-2">2</div>
             <div class="row-2">2</div>
             <div class="row-2">2</div>
         </div>
+
         <h3>底部对齐</h3>
+        <p>包裹容器添加 <code>.grid-bottom</code></p>
         <div class="grid-row grid-bottom demo-vertical">
             <div class="row-2">2</div>
             <div class="row-2">2</div>
             <div class="row-2">2</div>
             <div class="row-2">2</div>
         </div>
+
         <h3>等分网格</h3>
+        <p>子元素添加<code>.avg</code>,等分的个数与子元素数量相等。</p>
         <div class="grid-row">
             <div class="avg">avg</div>
             <div class="avg">avg</div>
@@ -64,7 +82,9 @@
             <div class="avg">avg</div>
             <div class="avg">avg</div>
         </div>
-        <h3>等分网格</h3>
+
+        <h3>网格排序</h3>
+        <p>子元素添加<code>.order-*</code></p>
         <div class="grid-row">
             <div class="avg order-5">1</div>
             <div class="avg order-4">2</div>
@@ -73,5 +93,8 @@
             <div class="avg order-1">5</div>
         </div>
     </div>
+    <footer class="text-center">
+        &copy;copyright beerui
+    </footer>
 </body>
 </html>
