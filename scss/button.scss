@@ -1,0 +1,96 @@
+@mixin btn-theme($color, $bg-color, $extent) {
+  color: $color;
+  border-color: $bg-color;
+  background-color: $bg-color;
+
+  &:hover,
+  &:active {
+    background-color: darken($bg-color, $extent);
+  }
+  &.btn-disabled  {
+    color: desaturate($color, $extent);
+    background-color: desaturate($bg-color, $extent);
+
+    &:hover,
+    &:active {
+      background-color: desaturate($bg-color, $extent);
+    }
+  }
+}
+
+/**
+ * 按钮
+ * 色系，大小，状态
+ */
+.btn {
+  &,
+  &-block {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+    padding: .5em 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    appearance: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    background-color: $btn-default;
+
+    &:hover,
+    &:active {
+      background-color: darken($btn-default, 5%);
+      text-decoration: none;
+    }
+
+    &.btn-disabled {
+      color: #C9C9C9;
+      cursor: not-allowed;
+
+      &:hover,
+      &:active {
+        background-color: $btn-default;
+      }
+    }
+  }
+  /* 块按钮 */
+  &-block {
+    display: block;
+    width: 100%;
+    padding: .65em 1em;
+  }
+  &-block + &-block {
+    margin-top: 1em;
+  }
+  /* 主色按钮 */
+  &-primary {
+    @include btn-theme(#fff, $btn-primary, 5%);
+  }
+  /* 辅色按钮 */
+  &-sub {
+    @include btn-theme(#fff, $btn-sub, 5%);
+  }
+  /* 稍大按钮 */
+  &-sm {
+    font-size: 14px;
+  }
+  /* 稍小按钮 */
+  &-lg {
+    font-size: 18px;
+  }
+  /* 禁用状态 */
+  &-primary,
+  &-sub {
+    &.btn-disabled {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
