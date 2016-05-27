@@ -6,95 +6,150 @@
     <title>BeerUI css3</title>
     <meta name="key" content="beerUI|css3|html5">
     <meta name="description" content="beerUI">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link href='https://fonts.useso.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="dist/beerui.css">
+    <link rel="stylesheet" href="dist/beerui.min.css">
+    <link rel="stylesheet" href="icon/css/font-awesome.min.css">
     <link rel="stylesheet" href="demo/demo.css">
 </head>
 <body>
     <header class="grid-wm">BeerUI <span><i>&</i> css3</span></header>
     <div class="demo">
-        <h2>网格</h2>
-        <p>BeerUI 使用了 12 列的非响应式网格系统,使用时需在包裹容器上添加对应的类名。</p>
+        <div class="demo-section">
+            <h2>按钮 <span>button</span></h2>
+            <p>默认在按钮上添加 <code>.btn</code>，主色按钮增加<code>.btn-primary</code>，辅色按钮增加<code>.btn-sub</code>。</p>
 
-        <h3>水平网格</h3>
-        <p>包裹容器添加 <code>.grid-row</code>,子元素添加 <code>.row-*</code></p>
-        <div class="grid-row">
-            <div class="row-4">4</div>
-            <div class="row-8">8</div>
-        </div>
+            <h3>按钮样式</h3>
+            <div class="demo-btn">
+                <a href="javascript:;" class="btn">默认样式</a>
+                <a href="javascript:;" class="btn btn-primary">主色按钮</a>
+                <a href="javascript:;" class="btn btn-sub">辅色按钮</a>
 
-        <h3>垂直网格</h3>
-        <p>包裹容器添加 <code>.grid-col</code>,子元素添加 <code>.col-*</code></p>
-        <div class="grid-col demo-grid-vertical">
-            <div class="col-4">4</div>
-            <div class="col-8">8</div>
-        </div>
+                <a href="javascript:;" class="btn-block">默认样式</a>
+                <a href="javascript:;" class="btn-block btn-primary">主色按钮</a>
+                <a href="javascript:;" class="btn-block btn-sub">辅色按钮</a>
+            </div>
 
-        <h3>偏移网格</h3>
-        <p>子元素添加 <code>.offset-*</code></p>
-        <div class="grid-row demo-offset">
-            <div class="row-4">4</div>
-            <div class="row-4 offset-4">4</div>
-        </div>
+            <h3>按钮尺寸</h3>
+            <p>稍小按钮添加<code>.btn-sm</code>，稍大按钮添加<code>.btn-lg</code>。</p>
+            <div class="demo-btn">
+                <a href="javascript:;" class="btn btn-sm">稍小按钮</a>
+                <a href="javascript:;" class="btn btn-primary">正常大小</a>
+                <a href="javascript:;" class="btn btn-sub btn-lg">稍大按钮</a>
 
-        <h3>左对齐</h3>
-        <p>包裹容器添加 <code>.grid-left</code>,内部实现则根据水平或垂直方向做了处理。</p>
-        <div class="grid-row grid-left">
-            <div class="row-2">2</div>
-            <div class="row-2">2</div>
-            <div class="row-2">2</div>
-            <div class="row-2">2</div>
-        </div>
-        <h3>右对齐</h3>
-        <p>包裹容器添加 <code>.grid-right</code></p>
-        <div class="grid-row grid-right">
-            <div class="row-2">2</div>
-            <div class="row-2">2</div>
-            <div class="row-2">2</div>
-            <div class="row-2">2</div>
-        </div>
+                <a href="javascript:;" class="btn-block btn-sm">稍小按钮</a>
+                <a href="javascript:;" class="btn-block btn-primary">正常大小</a>
+                <a href="javascript:;" class="btn-block btn-sub btn-lg">稍大按钮</a>
+            </div>
 
-        <h3>顶部对齐</h3>
-        <p>包裹容器添加 <code>.grid-top</code></p>
-        <div class="grid-row grid-top demo-grid-vertical">
-            <div class="row-2">2</div>
-            <div class="row-2">2</div>
-            <div class="row-2">2</div>
-            <div class="row-2">2</div>
-        </div>
+            <h3>按钮状态</h3>
+            <p>禁用状态添加<code>.btn-disabled</code></p>
+            <div>
+                <div class="mb">
+                    <a href="javascript:;" class="btn">正常状态</a>
+                    <a href="javascript:;" class="btn btn-disabled">禁用状态</a>
+                </div>
+                <div class="mb">
+                    <a href="javascript:;" class="btn btn-primary">正常状态</a>
+                    <a href="javascript:;" class="btn btn-primary btn-disabled">禁用状态</a>
+                </div>
+                <div class="mb">
+                    <a href="javascript:;" class="btn btn-sub">正常状态</a>
+                    <a href="javascript:;" class="btn btn-sub btn-disabled">禁用状态</a>
+                </div>
+            </div>
 
-        <h3>底部对齐</h3>
-        <p>包裹容器添加 <code>.grid-bottom</code></p>
-        <div class="grid-row grid-bottom demo-grid-vertical">
-            <div class="row-2">2</div>
-            <div class="row-2">2</div>
-            <div class="row-2">2</div>
-            <div class="row-2">2</div>
+            <h3>图标按钮</h3>
+            <p>借用了 <a href="http://fontawesome.io/" class="link">fontawesome</a> 图标库，用其他的库也可以。</p>
+            <div class="demo-btn">
+                <a href="javascript:;" class="btn"><i class="fa fa-spinner"></i> 默认样式</a>
+                <a href="javascript:;" class="btn btn-primary"><i class="fa fa-toggle-on"></i> 主色按钮</a>
+                <a href="javascript:;" class="btn btn-sub"><i class="fa fa-check-circle"></i> 辅色按钮</a>
+            </div>
         </div>
+        <div class="demo-section">
+            <h2>网格 <span>grid</span></h2>
+            <p>BeerUI 使用了 12 列的非响应式网格系统,使用时需在包裹容器上添加对应的类名。</p>
 
-        <h3>等分网格</h3>
-        <p>子元素添加<code>.avg</code>,等分的个数与子元素数量相等。</p>
-        <div class="grid-row">
-            <div class="avg">avg</div>
-            <div class="avg">avg</div>
-            <div class="avg">avg</div>
-            <div class="avg">avg</div>
-            <div class="avg">avg</div>
-        </div>
+            <h3>水平网格</h3>
+            <p>包裹容器添加 <code>.grid-row</code>，子元素添加 <code>.row-*</code></p>
+            <div class="grid-row">
+                <div class="row-4">4</div>
+                <div class="row-8">8</div>
+            </div>
 
-        <h3>网格排序</h3>
-        <p>子元素添加<code>.order-*</code></p>
-        <div class="grid-row">
-            <div class="avg order-5">1</div>
-            <div class="avg order-4">2</div>
-            <div class="avg order-3">3</div>
-            <div class="avg order-2">4</div>
-            <div class="avg order-1">5</div>
+            <h3>垂直网格</h3>
+            <p>包裹容器添加 <code>.grid-col</code>，子元素添加 <code>.col-*</code></p>
+            <div class="grid-col demo-grid-vertical">
+                <div class="col-4">4</div>
+                <div class="col-8">8</div>
+            </div>
+
+            <h3>偏移网格</h3>
+            <p>子元素添加 <code>.offset-*</code></p>
+            <div class="grid-row demo-offset">
+                <div class="row-4">4</div>
+                <div class="row-4 offset-4">4</div>
+            </div>
+
+            <h3>左对齐</h3>
+            <p>包裹容器添加 <code>.grid-left</code>，内部实现则根据水平或垂直方向做了处理。</p>
+            <div class="grid-row grid-left">
+                <div class="row-2">2</div>
+                <div class="row-2">2</div>
+                <div class="row-2">2</div>
+                <div class="row-2">2</div>
+            </div>
+            <h3>右对齐</h3>
+            <p>包裹容器添加 <code>.grid-right</code></p>
+            <div class="grid-row grid-right">
+                <div class="row-2">2</div>
+                <div class="row-2">2</div>
+                <div class="row-2">2</div>
+                <div class="row-2">2</div>
+            </div>
+
+            <h3>顶部对齐</h3>
+            <p>包裹容器添加 <code>.grid-top</code></p>
+            <div class="grid-row grid-top demo-grid-vertical">
+                <div class="row-2">2</div>
+                <div class="row-2">2</div>
+                <div class="row-2">2</div>
+                <div class="row-2">2</div>
+            </div>
+
+            <h3>底部对齐</h3>
+            <p>包裹容器添加 <code>.grid-bottom</code></p>
+            <div class="grid-row grid-bottom demo-grid-vertical">
+                <div class="row-2">2</div>
+                <div class="row-2">2</div>
+                <div class="row-2">2</div>
+                <div class="row-2">2</div>
+            </div>
+
+            <h3>等分网格</h3>
+            <p>子元素添加<code>.avg</code>，等分的个数与子元素数量相等。</p>
+            <div class="grid-row">
+                <div class="avg">avg</div>
+                <div class="avg">avg</div>
+                <div class="avg">avg</div>
+                <div class="avg">avg</div>
+                <div class="avg">avg</div>
+            </div>
+
+            <h3>网格排序</h3>
+            <p>子元素添加<code>.order-*</code></p>
+            <div class="grid-row">
+                <div class="avg order-5">1</div>
+                <div class="avg order-4">2</div>
+                <div class="avg order-3">3</div>
+                <div class="avg order-2">4</div>
+                <div class="avg order-1">5</div>
+            </div>
         </div>
     </div>
     <footer class="text-center">
-        The MIT License (MIT) &copy beerui
+        The MIT License (MIT) &copy BeerUI
     </footer>
 </body>
 </html>
