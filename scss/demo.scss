@@ -4,6 +4,12 @@ $color-bg-primary: #ff7b93;
 $color-border: #ccc;
 $color-border-light: #e5e5e5;
 
+body, html {
+  width: 100%;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* 代码 */
 code {
   color: $color-font;
@@ -23,9 +29,13 @@ header {
     font-size: 28px;
   }
 }
+.mb {
+  margin-bottom: 1em;
+}
 
 /* 底部 */
 footer {
+  font-size: 14px;
   padding: 2em 0;
   margin-top: 2em;
   border-top: 1px solid $color-border-light;
@@ -33,6 +43,7 @@ footer {
 }
 
 .demo {
+  width: 100%;
   max-width: 1000px;
   padding: 0 1em;
   margin: 0 auto;
@@ -42,6 +53,11 @@ footer {
     font-size: 24px;
     color: $color-font;
     margin: 1em 0;
+
+    span {
+      font-size: 20px;
+      text-transform: capitalize;
+    }
   }
   h3 {
     font-size: 18px;
@@ -49,6 +65,10 @@ footer {
     margin: 2em 0 1em;
     font-weight: bold;
   }
+  .link {
+    color: $color-font;
+  }
+
   /* 网格 */
   .grid-row,
   .grid-col {
@@ -77,6 +97,19 @@ footer {
     &.grid-col > div {
       border: none;
     }
+  }
+
+  /* 按钮 */
+  .demo-btn {
+    .btn {
+      margin-bottom: 1em;
+    }
+    .fa-spinner {
+      animation:  round 2s linear infinite;
+    }
+  }
+  @keyframes round {
+    to {transform: rotate(360deg);}
   }
 }
 
