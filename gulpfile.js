@@ -1,12 +1,10 @@
 var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     sass = require('gulp-sass'),
-    path = require('path'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
     rename = require('gulp-rename'),
-    sourcemaps = require('gulp-sourcemaps'),
-    watchify = require('watchify');
+    sourcemaps = require('gulp-sourcemaps');
 
 // 合并
 gulp.task('dist', function() {
@@ -28,7 +26,7 @@ function style(file, path){
         .pipe(gulp.dest(path))
 }
 
-gulp.task("default", function() {
+gulp.task("dev", function() {
     gulp.watch("./scss/**.scss", ['dist', 'demo']);
 });
 
