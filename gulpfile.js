@@ -13,7 +13,7 @@ gulp.task('dist', function() {
     style('./scss/beerui.scss', 'dist');
 });
 gulp.task('demo', function() {
-    style('./scss/demo.scss', 'demo');
+    style('./demo/demo.scss', 'demo');
 });
 
 function style(file, path){
