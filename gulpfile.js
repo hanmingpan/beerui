@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-    jshint = require('gulp-jshint'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),

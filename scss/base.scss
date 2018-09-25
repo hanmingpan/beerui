@@ -515,6 +515,10 @@ body {
   position: relative;
   background: $base-background;
   font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;;
+  font-family:
+          system, -apple-system, BlinkMacSystemFont,
+          "PingFang SC", "Segoe UI", "Microsoft YaHei", "wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: $base-line-height;
   color: $base-text-color;
